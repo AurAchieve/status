@@ -5,6 +5,8 @@ repo: status # The name of this repository
 sites:
   - name: App Server/API
     url: https://api.aurachieve.com
+  - name: AuraPages
+    url: https://aurapage.me
   - name: Website
     url: https://aurachieve.com
 
