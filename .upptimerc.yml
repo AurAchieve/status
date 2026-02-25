@@ -45,6 +45,13 @@ status-website:
       wrapper.style.cssText = 'display:flex;justify-content:center;margin-bottom:1.5rem;';
       wrapper.innerHTML = '<span class="status-badge ' + statusClass + '"><span class="status-dot"><span class="status-dot-ping"></span><span class="status-dot-core"></span></span>' + statusText + '</span>';
       header.insertBefore(wrapper, header.firstChild);
+      var footer = document.querySelector('footer');
+      if (footer) {
+        var contactLine = document.createElement('p');
+        contactLine.className = 'footer-contact';
+        contactLine.innerHTML = 'Contact us at <a href="mailto:hello@aurachieve.com">hello@aurachieve.com</a> to report an issue.';
+        footer.appendChild(contactLine);
+      }
     });
     </script>
   css: |
@@ -152,6 +159,18 @@ status-website:
       color: #9ca3af;
       font-size: 0.875rem;
       margin-top: 4rem;
+    }
+    .footer-contact {
+      margin-top: 0.5rem;
+      color: #6b7280;
+    }
+    .footer-contact a {
+      color: #22c55e;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .footer-contact a:hover {
+      text-decoration: underline;
     }
     @keyframes upptime-ping {
       75%, 100% { transform: scale(2.5); opacity: 0; }
