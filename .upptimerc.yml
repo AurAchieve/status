@@ -33,6 +33,20 @@ status-website:
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var header = document.querySelector('header');
+      if (!header) return;
+      var hasDown = document.querySelectorAll('.tag.down, .tag.open').length > 0;
+      var hasDegraded = document.querySelectorAll('.tag.degraded').length > 0;
+      var statusClass = hasDown ? 'down' : (hasDegraded ? 'degraded' : 'operational');
+      var statusText = hasDown ? 'Some systems are experiencing issues' : (hasDegraded ? 'Some systems are degraded' : 'All systems operational');
+      var wrapper = document.createElement('div');
+      wrapper.style.cssText = 'display:flex;justify-content:center;margin-bottom:1.5rem;';
+      wrapper.innerHTML = '<span class="status-badge ' + statusClass + '"><span class="status-dot"><span class="status-dot-ping"></span><span class="status-dot-core"></span></span>' + statusText + '</span>';
+      header.insertBefore(wrapper, header.firstChild);
+    });
+    </script>
   css: |
     /* Better Stack-inspired theme */
     :root {
@@ -74,8 +88,7 @@ status-website:
       height: 2rem !important;
     }
     .logo div {
-      font-weight: 600;
-      font-size: 1rem;
+      display: none !important;
     }
     nav ul a {
       padding: 0.75rem 1rem;
@@ -140,6 +153,63 @@ status-website:
       font-size: 0.875rem;
       margin-top: 4rem;
     }
+    @keyframes upptime-ping {
+      75%, 100% { transform: scale(2.5); opacity: 0; }
+    }
+    @keyframes upptime-pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.6; }
+    }
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.625rem;
+      border-radius: 9999px;
+      padding: 0.5rem 1.25rem;
+      font-size: 0.875rem;
+      font-weight: 500;
+    }
+    .status-badge.operational {
+      background: #dcfce7;
+      color: #15803d;
+      border: 1px solid #bbf7d0;
+    }
+    .status-badge.degraded {
+      background: #fef3c7;
+      color: #b45309;
+      border: 1px solid #fde68a;
+    }
+    .status-badge.down {
+      background: #fee2e2;
+      color: #dc2626;
+      border: 1px solid #fecaca;
+    }
+    .status-dot {
+      position: relative;
+      width: 10px;
+      height: 10px;
+      flex-shrink: 0;
+      display: inline-block;
+    }
+    .status-dot-ping {
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      animation: upptime-ping 1.5s cubic-bezier(0, 0, 0.2, 1) infinite;
+      opacity: 0.75;
+    }
+    .status-dot-core {
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      animation: upptime-pulse 2s ease-in-out infinite;
+    }
+    .operational .status-dot-ping,
+    .operational .status-dot-core { background: #22c55e; }
+    .degraded .status-dot-ping,
+    .degraded .status-dot-core { background: #f59e0b; }
+    .down .status-dot-ping,
+    .down .status-dot-core { background: #ef4444; }
   workflowSchedule:
     uptime: "*/2 * * * *"
 
