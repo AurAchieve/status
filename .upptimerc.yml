@@ -21,13 +21,125 @@ status-website:
   # baseUrl: /your-repo-name
   logoUrl: https://avatars.githubusercontent.com/u/217299217?s=200&v=4
   name: AurAchieve
-  introTitle: "AurAchieve"
+  introTitle: "AurAchieve Status"
   introMessage: "Check for the status of **AurAchieve** services here. If everything seems okay here and you're still facing issues, shoot a email to [support@aurachieve.com](mailto:support@aurachieve.com)"
+  theme: light
   navbar:
     - title: Status
       href: /
     - title: GitHub
       href: https://github.com/$OWNER
+  customHeadHtml: |
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  css: |
+    /* Better Stack-inspired theme */
+    :root {
+      --body-background-color: #f9fafb;
+      --body-text-color: #111827;
+      --card-background-color: #ffffff;
+      --nav-background-color: #ffffff;
+      --nav-border-bottom-color: #e5e7eb;
+      --nav-current-border-bottom-color: #22c55e;
+      --card-border-color: #e5e7eb;
+      --down-border-left-color: #ef4444;
+      --down-background-color: #fef2f2;
+      --degraded-border-left-color: #f59e0b;
+      --up-border-left-color: #22c55e;
+      --up-color-color: #111827;
+      --down-color-color: #111827;
+      --degraded-color-color: #111827;
+      --tag-color: inherit;
+      --tag-up-background-color: #dcfce7;
+      --tag-down-background-color: #fee2e2;
+      --tag-degraded-background-color: #fef3c7;
+      --change-background-color: #fef3c7;
+      --graph-opacity: 1;
+      --graph-filter: none;
+    }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+    nav {
+      box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+      margin-bottom: 2.5rem;
+      padding: 0;
+    }
+    nav .container {
+      height: 64px;
+    }
+    .logo img {
+      border-radius: 50% !important;
+      height: 2rem !important;
+    }
+    .logo div {
+      font-weight: 600;
+      font-size: 1rem;
+    }
+    nav ul a {
+      padding: 0.75rem 1rem;
+      font-size: 0.875rem;
+      font-weight: 500;
+    }
+    header {
+      text-align: center;
+      padding: 3rem 0 2.5rem;
+      margin-bottom: 0;
+    }
+    header h1 {
+      font-size: 2.25rem;
+      font-weight: 700;
+      letter-spacing: -0.025em;
+      color: #111827;
+    }
+    header p.lead {
+      color: #6b7280;
+      font-size: 1rem;
+      max-width: 560px;
+      margin: 0.75rem auto 0;
+    }
+    article {
+      border-radius: 0.5rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+      padding: 1rem 1.25rem;
+    }
+    article h4 {
+      font-weight: 500;
+      font-size: 0.9375rem;
+    }
+    .tag {
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      font-weight: 500;
+      padding: 0.25rem 0.625rem;
+    }
+    .tag.up, .tag.closed {
+      color: #15803d !important;
+    }
+    .tag.down, .tag.open {
+      color: #b91c1c !important;
+    }
+    .tag.degraded {
+      color: #b45309 !important;
+    }
+    h2 {
+      font-weight: 600;
+      font-size: 1.125rem;
+    }
+    h3 {
+      opacity: 1;
+      color: #9ca3af;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      font-weight: 500;
+    }
+    footer {
+      color: #9ca3af;
+      font-size: 0.875rem;
+      margin-top: 4rem;
+    }
   workflowSchedule:
     uptime: "*/2 * * * *"
 
