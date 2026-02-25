@@ -34,7 +34,7 @@ status-website:
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script>
-    document.addEventListener('DOMContentLoaded', function() {
+    window.addEventListener('load', function() {
       var header = document.querySelector('header');
       if (!header) return;
       var hasDown = document.querySelectorAll('.tag.down, .tag.open').length > 0;
