@@ -4,36 +4,39 @@
     "url": "https://api.aurachieve.com",
     "icon": "https://icons.duckduckgo.com/ip3/api.aurachieve.com.ico",
     "slug": "app-server-api",
-    "status": "up",
-    "uptime": "100.00%",
-    "uptimeDay": "100.00%",
-    "uptimeWeek": "100.00%",
-    "uptimeMonth": "100.00%",
-    "uptimeYear": "100.00%",
+    "status": "down",
+    "uptime": "99.99%",
+    "uptimeDay": "99.99%",
+    "uptimeWeek": "99.99%",
+    "uptimeMonth": "99.99%",
+    "uptimeYear": "99.99%",
     "time": 298,
-    "timeDay": 159,
+    "timeDay": 142,
     "timeWeek": 298,
     "timeMonth": 298,
     "timeYear": 298,
-    "dailyMinutesDown": {}
+    "dailyMinutesDown": {
+      "2026-02-26": 0
+    }
   },
   {
     "name": "AuraPages",
     "url": "https://aurapage.me",
     "icon": "https://icons.duckduckgo.com/ip3/aurapage.me.ico",
     "slug": "aura-pages",
-    "status": "up",
-    "uptime": "97.64%",
-    "uptimeDay": "100.00%",
-    "uptimeWeek": "97.64%",
-    "uptimeMonth": "97.64%",
-    "uptimeYear": "97.64%",
+    "status": "down",
+    "uptime": "98.02%",
+    "uptimeDay": "99.99%",
+    "uptimeWeek": "98.02%",
+    "uptimeMonth": "98.02%",
+    "uptimeYear": "98.02%",
     "time": 2214,
-    "timeDay": 275,
+    "timeDay": 25,
     "timeWeek": 2214,
     "timeMonth": 2214,
     "timeYear": 2214,
     "dailyMinutesDown": {
+      "2026-02-26": 0,
       "2026-02-24": 50
     }
   },
@@ -42,17 +45,19 @@
     "url": "https://aurachieve.com",
     "icon": "https://icons.duckduckgo.com/ip3/aurachieve.com.ico",
     "slug": "website",
-    "status": "up",
+    "status": "down",
     "uptime": "100.00%",
     "uptimeDay": "100.00%",
     "uptimeWeek": "100.00%",
     "uptimeMonth": "100.00%",
     "uptimeYear": "100.00%",
     "time": 191,
-    "timeDay": 163,
+    "timeDay": 176,
     "timeWeek": 191,
     "timeMonth": 191,
     "timeYear": 191,
-    "dailyMinutesDown": {}
+    "dailyMinutesDown": {
+      "2026-02-26": 0
+    }
   }
 ]
