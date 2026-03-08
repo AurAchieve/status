@@ -9,9 +9,6 @@ sites:
     url: https://aurapage.me
   - name: Website
     url: https://aurachieve.com
-    type: globalping
-    location: world
-
 status-website:
   # Add your custom domain name, or remove the `cname` line if you don't have a domain
   # Uncomment the `baseUrl` line if you don't have a custom domain and add your repo name there
