@@ -1,7 +1,7 @@
 url: https://api.aurachieve.com
-status: down
-code: 503
-responseTime: 304
-lastUpdated: 2026-06-05T00:01:38.124Z
+status: up
+code: 200
+responseTime: 584
+lastUpdated: 2026-06-05T15:42:06.370Z
 startTime: 2026-02-24T15:23:31.616Z
 generator: Upptime <https://github.com/upptime/upptime>
